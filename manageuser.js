@@ -1,17 +1,17 @@
 //© 2021 Sean Murdock
 
-let userName = "";
-let password = "";
+let phoneNumber = "";
+let onetimepassword = "";
 let verifypassword = "";
 let passwordRegEx=/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%!]).{6,40})/;
 
-function setusername(){
-    userName = $("#username").val();
+function setponenumber(){
+    phoneNumber = $("#phonenumber").val();
 }
 
-function setuserpassword(){
-    password = $("#password").val();
-    var valid=passwordRegEx.exec(password);
+function onetimepassword(){
+    password = $("#onetimepassword").val();
+    var valid=passwordRegEx.exec(onetimepassword);
     if (!valid){
         alert('Must be 6 digits, upper, lower, number, and symbol');
     }
