@@ -9,6 +9,14 @@ function setponenumber(){
     phoneNumber = $("#phonenumber").val();
 }
 
+const sendText=()=>{
+    $.ajax({
+        type: "POST"
+        url: 'https://dev.stedi.me/twofactorlogin/' + phonenumber,
+        contentType: ''
+    })
+}
+
 function onetimepassword(){
     password = $("#onetimepassword").val();
     var valid=passwordRegEx.exec(onetimepassword);
