@@ -2,17 +2,17 @@
 
 let phoneNumber = "";
 let onetimepassword = "";
-let verifypassword = "";
+let verifyonetimepassword = "";
 let passwordRegEx=/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%!]).{6,40})/;
 
-function setponenumber(){
+function setphonenumber(){
     phoneNumber = $("#phonenumber").val();
 }
 
 const sendText=()=>{
     $.ajax({
         type: "POST"
-        url: 'https://dev.stedi.me/twofactorlogin/' + phonenumber,
+        url: 'https://dev.stedi.me/twofactorlogin/' + phoneNumber,
         contentType: ''
     })
 }

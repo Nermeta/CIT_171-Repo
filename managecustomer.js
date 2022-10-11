@@ -1,10 +1,14 @@
 //© 2021 Sean Murdock
 
-let customerName = "";
+let phonenumber = "";
 let phone = "";
 let bday = "";
 let form = "";
 let elements = "";
+
+function setphonenumber(){
+    userName = $('#phonenumber').val();
+}
 
 function setcustomername(){
     customerName = $("#cn").val();
@@ -53,7 +57,7 @@ function findcustomer(email){
     var headers = { "suresteps.session.token": localStorage.getItem("token")};
     $.ajax({
         type: 'GET',
-        url: `/customer/${email}`,
+        url: `'https://dev.stedi.me/customer/${email}`,
         contentType: 'application/text',
         dataType: 'text',
         headers: headers,
